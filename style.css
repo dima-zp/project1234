@@ -1,0 +1,199 @@
+ /* 🔹 Глобальные правила */
+   
+
+html, body {
+   font-family: 'Roboto', sans-serif; /* указываем Roboto */
+   font-size: 16px;
+   
+  margin: 100px;
+  padding: 0;
+  overflow-x: hidden; /* убирает горизонтальную прокрутку */
+}
+
+
+    img {
+      max-width: 100%; /* все картинки автоматически подстраиваются */
+      height: auto;
+    }
+
+
+    /* 🔹 Сетка для десктопа */
+    .container {
+      display: flex;
+      gap: 10px;
+      padding: 10px;
+    }
+    .card {
+      flex: 1;
+      background: lightblue;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* 🔹 Адаптация для планшета */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column; /* карточки становятся вертикальными */
+      }
+      body {
+        font-size: 14px; /* уменьшаем текст */
+      }
+    }
+
+    /* 🔹 Адаптация для телефона */
+    @media (max-width: 480px) {
+      .card {
+        background: lightgreen; /* меняем цвет для наглядности */
+        padding: 10px;
+      }
+      h1 {
+        font-size: 18px; /* уменьшаем заголовок */
+      }
+    }
+
+
+.site-note {
+  font-size: 14px;
+  color: #501b1b;
+  text-align: center;
+  padding: 8px 0;
+  background-color: #f0f0f0;
+  font-style: italic;
+}
+
+
+
+
+
+
+
+.menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .menu li {
+      display: inline-block;
+         color: #8f3c3c;
+      margin-right: 0px;
+    }
+    .menu a {
+      text-decoration: none;
+      color: #8f3c3c;
+      font-weight: 300; /* чуть жирнее для меню */
+    }
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 10px;
+  gap: 10px;
+  background: #ffdbf9;
+}
+
+.main-nav li {
+  position: relative;
+  border: 1px solid #ffdbf3;
+  background-color: #ffdbf9;
+  padding: 8px 10px;
+  margin: 0 15px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.main-nav li:hover {
+  background-color: #ffdbf5;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #222;
+  font-size: 18px;
+}
+
+
+  .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #f9f9f9;
+      min-width: 150px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      padding: 10px;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block; /* показываем меню при наведении */
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 5px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .dropdown-menu a:hover {
+      background: #eee;
+    }
+    .h3 {
+      font-size: 16px;
+      color: #2210ca;
+    }
+
+
+
+@keyframes run {
+  from { left: 100%; }
+  to   { left: -100%; }
+}
+
+.text-center {
+  text-align: center; /* чтобы текст реально центрировался */
+  font-size: 1.8rem;  /* примерно 29px, крупный и читаемый */
+  font-family: 'Times New Roman', Times, serif;
+  color: #500303;
+}
+.lang{
+text-align: center; /* чтобы текст реально центрировался */
+font-size: 16px;
+font-family: 'Times New Roman', Times, serif;
+}
+
+.iframe {
+  max-width: 100%;
+  display: block;
+}
+
+
+.marquee {
+  position: fixed;
+  top: 0;                /* прямо сверху */
+  width: 100%;
+  background: rgba(255,255,255,0.9); /* полупрозрачный фон, чтобы видно было меню под ним */
+  z-index: 2000;         /* выше навбара (у navbar обычно 1030) */
+  padding: 10px 0;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.marquee h3 {
+  margin: 0;
+  font-size: 1rem;
+  animation: scrollText 40s linear infinite;
+}
+
+@keyframes scrollText {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
